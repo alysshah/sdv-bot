@@ -1,0 +1,679 @@
+{
+
+    "Alex": {
+        "loves": [
+            "All Universal Loves",
+            "Complete Breakfast",
+            "Salmon Dinner"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Eggs (except Void Egg)"
+        ],
+        "birthday": "Summer 13",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png"
+    },
+    "Elliott": {
+        "loves": [
+            "All Universal Loves",
+            "Crab Cakes",
+            "Duck Feather",
+            "Lobster",
+            "Pomegranate",
+            "Squid Ink",
+            "Tom Kha Soup"
+        ],
+        "likes": [
+            "All Universal Likes (except Amaranth & Pizza)",
+            "All Fruit (except Pomegranate & Salmonberry)",
+            "Octopus",
+            "Squid"
+        ],
+        "birthday": "Fall 5",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Elliott.png"
+    },
+    "Harvey": {
+        "loves": [
+            "All Universal Loves",
+            "Coffee",
+            "Pickles",
+            "Super Meal",
+            "Truffle Oil",
+            "Wine"
+        ],
+        "likes": [
+            "All Universal Likes (except Cheese, Goat Cheese, Blueberry Tart, Chocolate Cake, Cookie, Cranberry Sauce, Fried Mushroom, Glazed Yams, Hashbrowns, Ice Cream, Pancakes, Pink Cake, Pizza, Rhubarb Pie, Rice Pudding)",
+            "All Fruit (except Salmonberry & Spice Berry)",
+            "Chanterelle",
+            "Common Mushroom",
+            "Daffodil",
+            "Dandelion",
+            "Duck Egg",
+            "Ginger",
+            "Goat Milk",
+            "Hazelnut",
+            "Holly",
+            "Large Goat Milk",
+            "Leek",
+            "Magma Cap",
+            "Morel",
+            "Purple Mushroom",
+            "Quartz",
+            "Snow Yam",
+            "Spring Onion",
+            "Wild Horseradish",
+            "Winter Root"
+        ],
+        "birthday": "Winter 14",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/95/Harvey.png"
+    },
+    "Sam": {
+        "loves": [
+            "All Universal Loves",
+            "Cactus Fruit",
+            "Maple Bar",
+            "Pizza",
+            "Tigerseye"
+        ],
+        "likes": [
+            "All Universal Likes (except Duck Mayonnaise, Mayonnaise, Pickles, and Vegetables)",
+            "Joja Cola"
+        ],
+        "birthday": "Summer 17",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/94/Sam.png"
+    },
+    "Sebastian": {
+        "loves": [
+            "All Universal Loves",
+            "Frozen Tear",
+            "Obsidian",
+            "Pumpkin Soup",
+            "Sashimi",
+            "Void Egg"
+        ],
+        "likes": [
+            "All Universal Likes (except Flowers, Complete Breakfast, Farmer's Lunch, Omelet, and Artisan Goods other than Coffee, Green Tea, and Oil)",
+            "Flounder",
+            "Quartz"
+        ],
+        "birthday": "Winter 10",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Sebastian.png"
+    },
+    "Shane": {
+        "loves": [
+            "All Universal Loves",
+            "Beer",
+            "Hot Pepper",
+            "Pepper Poppers",
+            "Pizza"
+        ],
+        "likes": [
+            "All Universal Likes (except Pickles)",
+            "All Eggs (except Void Egg)",
+            "All Fruit (except Hot Pepper)"
+        ],
+        "birthday": "Spring 20",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/8b/Shane.png"
+    },
+    "Abigail": {
+        "loves": [
+            "All Universal Loves",
+            "Amethyst", 
+            "Banana Pudding",
+            "Blackberry Cobbler",
+            "Chocolate Cake",
+            "Pufferfish",
+            "Pumpkin",
+            "Spicy Eel"
+        ],
+        "likes": [
+            "All Universal Likes (except Vegetables)",
+            "Quartz"
+        ],
+        "birthday": "Fall 13",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"
+    },
+    "Emily": {
+        "loves": [
+            "All Universal Loves",
+            "Amethyst",
+            "Aquamarine",
+            "Cloth",
+            "Emerald",
+            "Jade",
+            "Ruby",
+            "Survival Burger",
+            "Topaz",
+            "Wool"
+        ],
+        "likes": [
+            "All Universal Likes (except Fish Taco, Fried Eel, Ice Cream, Maki Roll, Rice Pudding, Salmon Dinner, Spicy Eel, Sashimi)"
+        ],
+        "birthday": "Spring 27",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/2/28/Emily.png"
+    },
+    "Haley": {
+        "loves": [
+            "All Universal Loves (except Prismatic Shard)",
+            "Coconut",
+            "Fruit Salad",
+            "Pink Cake",
+            "Sunflower"
+        ],
+        "likes": [
+            "All Universal Likes (except Vegetables)",
+            "Daffodil"
+        ],
+        "birthday": "Spring 14",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png"
+    },
+    "Leah": {
+        "loves": [
+            "All Universal Loves",
+            "Goat Cheese",
+            "Poppyseed Muffin",
+            "Salad",
+            "Stir Fry",
+            "Truffle",
+            "Vegetable Medley",
+            "Wine"
+        ],
+        "likes": [
+            "All Universal Likes (except Foraged Minerals other than Earth Crystal, Gems other than Diamond & Prismatic Shard, Carp Surprise, Cookie, Hashbrowns, Ice Cream, Pancakes, Pink Cake, Pizza, Rice Pudding, Survival Burger, Tortilla)",
+            "All Eggs (except Void Egg)",
+            "All Fruit",
+            "All Milk",
+            "Chanterelle",
+            "Common Mushroom",
+            "Daffodil",
+            "Dandelion",
+            "Driftwood",
+            "Ginger",
+            "Hazelnut",
+            "Holly",
+            "Leek",
+            "Magma Cap",
+            "Morel",
+            "Purple Mushroom",
+            "Quartz",
+            "Snow Yam",
+            "Spring Onion",
+            "Wild Horseradish",
+            "Winter Root"
+        ],
+        "birthday": "Winter 23",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/e/e6/Leah.png"
+    },
+    "Maru": {
+        "loves": [
+            "All Universal Loves",
+            "Battery Pack",
+            "Cauliflower",
+            "Cheese Cauliflower",
+            "Diamond",
+            "Gold Bar",
+            "Iridium Bar",
+            "Miner's Treat",
+            "Pepper Poppers",
+            "Radioactive Bar",
+            "Rhubarb Pie",
+            "Strawberry"
+        ],
+        "likes": [
+            "All Universal Likes (except Honey, Maple Syrup, Pickles)",
+            "Copper Bar",
+            "Iron Bar",
+            "Oak Resin",
+            "Pine Tar",
+            "Quartz",
+            "Radioactive Ore"
+        ],
+        "birthday": "Summer 10",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Maru.png"
+    },
+    "Penny": {
+        "loves": [
+            "All Universal Loves (except Rabbit's Foot)",
+            "Diamond",
+            "Emerald",
+            "Melon",
+            "Poppy",
+            "Poppyseed Muffin",
+            "Red Plate",
+            "Roots Platter",
+            "Sandfish",
+            "Tom Kha Soup"
+        ],
+        "likes": [
+            "All Universal Likes (except Algae Soup, Beer, Mead, Pale Ale, Pale Broth, Piña Colada, Tom Kha Soup, & Wine)",
+            "All Milk",
+            "All Artifacts",
+            "Dandelion",
+            "Leek"
+        ],
+        "birthday": "Fall 2",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png"
+    },
+    "Caroline": {
+        "loves": [
+            "All Universal Loves",
+            "Fish Taco",
+            "Green Tea",
+            "Summer Spangle",
+            "Tropical Curry"
+        ],
+        "likes": [
+            "All Universal Likes (except Amaranth, Duck Mayonnaise, & Mayonnaise)",
+            "Daffodil",
+            "Tea Leaves"
+        ],
+        "birthday": "Winter 7",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+    },
+    "Clint": {
+        "loves": [
+            "All Universal Loves",
+            "Amethyst",
+            "Aquamarine",
+            "Artichoke Dip",
+            "Emerald",
+            "Fiddlehead Risotto",
+            "Iridium Bar",
+            "Jade",
+            "Omni Geode",
+            "Ruby",
+            "Topaz"
+        ],
+        "likes": [
+            "All Universal Likes (except Flowers)",
+            "Copper Bar",
+            "Iron Bar"
+        ],
+        "birthday": "Winter 26",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
+    },
+    "Demetrius": {
+        "loves": [
+            "All Universal Loves",
+            "Bean Hotpot",
+            "Ice Cream",
+            "Rice Pudding",
+            "Strawberry"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Eggs (except Void Egg)",
+            "All Fruit (except Strawberry)",
+            "Purple Mushroom"
+        ],
+        "birthday": "Summer 19",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
+    },
+    "Dwarf": {
+        "loves": [
+            "All Universal Loves",
+            "Amethyst",
+            "Aquamarine",
+            "Emerald",
+            "Jade",
+            "Lemon Stone",
+            "Omni Geode",
+            "Ruby",
+            "Topaz"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Artifacts",
+            "Cave Carrot",
+            "Quartz"
+        ],
+        "birthday": "Summer 22",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Dwarf.png"
+    },
+    "Evelyn": {
+        "loves": [
+            "All Universal Loves",
+            "Beet",
+            "Chocolate Cake",
+            "Diamond",
+            "Fairy Rose",
+            "Stuffing",
+            "Tulip"
+        ],
+        "likes": [
+            "All Universal Likes (except Fried Eel, Garlic, Maki Roll, Sashimi, Spicy Eel, & Trout Soup)",
+            "All Milk",
+            "Daffodil"
+        ],
+        "birthday": "Winter 20",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/8e/Evelyn.png"
+    },
+    "George": {
+        "loves": [
+            "All Universal Loves",
+            "Fried Mushroom",
+            "Leek"
+        ],
+        "likes": [
+            "All Universal Likes (except Flowers)",
+            "Daffodil"
+        ],
+        "birthday": "Fall 24",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/7/78/George.png"
+    },
+    "Gus": {
+        "loves": [
+            "All Universal Loves",
+            "Diamond",
+            "Escargot",
+            "Fish Taco",
+            "Orange",
+            "Tropical Curry"
+        ],
+        "likes": [
+            "All Universal Likes (except Coleslaw)",
+            "Daffodil"
+        ],
+        "birthday": "Summer 8",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/Gus.png"
+    },
+    "Jas": {
+        "loves": [
+            "All Universal Loves",
+            "Fairy Rose",
+            "Pink Cake",
+            "Plum Pudding"
+        ],
+        "likes": [
+            "All Universal Likes (except Triple Shot Espresso, Vegetables and Artisan Goods other than Honey, Jelly, & Oil)",
+            "Coconut",
+            "Daffodil"
+        ],
+        "birthday": "Summer 4",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/55/Jas.png"
+    },
+    "Jodi": {
+        "loves": [
+            "All Universal Loves",
+            "Chocolate Cake",
+            "Crispy Bass",
+            "Diamond",
+            "Eggplant Parmesan",
+            "Fried Eel",
+            "Pancakes",
+            "Rhubarb Pie",
+            "Vegetable Medley"
+        ],
+        "likes": [
+            "All Universal Likes (except Garlic)",
+            "All Eggs (except Void Egg)",
+            "All Fruit (except Spice Berry)",
+            "All Milk"
+        ],
+        "birthday": "Fall 11",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/4/41/Jodi.png"
+    },
+    "Kent": {
+        "loves": [
+            "All Universal Loves",
+            "Fiddlehead Risotto",
+            "Roasted Hazelnuts"
+        ],
+        "likes": [
+            "All Universal Likes (except Algae Soup, Sashimi, & Tortilla)",
+            "All Eggs (except Void Egg)",
+            "All Fruit",
+            "Daffodil"
+        ],
+        "birthday": "Spring 4",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/99/Kent.png"
+    },
+    "Krobus": {
+        "loves": [
+            "All Universal Loves",
+            "Diamond",
+            "Iridium Bar",
+            "Pumpkin",
+            "Void Egg",
+            "Void Mayonnaise",
+            "Wild Horseradish"
+        ],
+        "likes": [
+            "All Universal Likes (except Life Elixir and All Cooking other than Seafoam Pudding)",
+            "Gold Bar",
+            "Quartz"
+        ],
+        "birthday": "Winter 1",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/7/71/Krobus.png"
+    },
+    "Leo": {
+        "loves": [
+            "All Universal Loves",
+            "Duck Feather",
+            "Mango",
+            "Ostrich Egg",
+            "Poi"
+        ],
+        "likes": [
+            "All Universal Likes (except Beer, Coffee, Life Elixir, Mead, Pale Ale, Pickles, Piña Colada, Wine, and Cooking other than Bread, Fried Egg, Poi, Mango Sticky Rice, & Triple Shot Espresso)",
+            "Dragon Tooth",
+            "Mango Sticky Rice",
+            "Nautilus Shell",
+            "Quartz",
+            "Rainbow Shell",
+            "Sea Urchin",
+            "Spice Berry"
+        ],
+        "birthday": "Summer 26",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Leo.png"
+    },
+    "Lewis": {
+        "loves": [
+            "All Universal Loves",
+            "Autumn's Bounty",
+            "Glazed Yams",
+            "Green Tea",
+            "Hot Pepper",
+            "Vegetable Medley"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "Blueberry",
+            "Cactus Fruit",
+            "Coconut"
+        ],
+        "birthday": "Spring 7",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/2/2b/Lewis.png"
+    },
+    "Linus": {
+        "loves": [
+            "All Universal Loves",
+            "Blueberry Tart",
+            "Cactus Fruit",
+            "Coconut",
+            "Dish o' The Sea",
+            "Yam"
+        ],
+        "likes": [
+            "All Universal Likes (except Foraged Minerals & Gems other than Diamond & Prismatic Shard)",
+            "All Eggs (except Void Egg)",
+            "All Milk",
+            "All Fruit (except Cactus Fruit & Coconut)",
+            "Chanterelle",
+            "Common Mushroom",
+            "Daffodil",
+            "Dandelion",
+            "Ginger",
+            "Hazelnut",
+            "Holly",
+            "Leek",
+            "Magma Cap",
+            "Morel",
+            "Purple Mushroom",
+            "Snow Yam",
+            "Spring Onion",
+            "Wild Horseradish",
+            "Winter Root"
+        ],
+        "birthday": "Winter 3",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/3/31/Linus.png"
+    },
+    "Marnie": {
+        "loves": [
+            "All Universal Loves",
+            "Diamond",
+            "Farmers Lunch",
+            "Pink Cake",
+            "Pumpkin Pie"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Eggs (except Void Egg)",
+            "All Milk",
+            "Quartz"
+        ],
+        "birthday": "Fall 18",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/Marnie.png"
+    },
+    "Pam": {
+        "loves": [
+            "All Universal Loves",
+            "Beer",
+            "Cactus Fruit",
+            "Glazed Yams",
+            "Mead",
+            "Pale Ale",
+            "Parsnip",
+            "Parsnip Soup",
+            "Pina Colada"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Fruit (except Cactus Fruit)",
+            "All Milk",
+            "Daffodil"
+        ],
+        "birthday": "Spring 18",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/da/Pam.png"
+    },
+    "Pierre": {
+        "loves": [
+            "All Universal Loves",
+            "Fried Calamari"
+        ],
+        "likes": [
+            "All Universal Likes (except Corn, Garlic, Foraged Minerals, Gems other than Diamond & Prismatic Shard, Parsnip Soup, & Tortilla)",
+            "All Eggs (except Void Egg)",
+            "All Milk",
+            "Daffodil",
+            "Dandelion"
+        ],
+        "birthday": "Spring 26",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Pierre.png"
+    },
+    "Robin": {
+        "loves": [
+            "All Universal Loves",
+            "Goat Cheese",
+            "Peach",
+            "Spaghetti"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Milk",
+            "All Fruit (except Peach)",
+            "Hardwood",
+            "Quartz"
+        ],
+        "birthday": "Fall 21",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Robin.png"
+    },
+    "Sandy": {
+        "loves": [
+            "All Universal Loves",
+            "Crocus",
+            "Daffodil",
+            "Mango Sticky Rice",
+            "Sweet Pea"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Fruit",
+            "Goat Milk",
+            "Large Goat Milk",
+            "Quartz",
+            "Wool"
+        ],
+        "birthday": "Fall 15",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Sandy.png"
+    },
+    "Vincent": {
+        "loves": [
+            "All Universal Loves",
+            "Cranberry Candy",
+            "Ginger Ale",
+            "Grape",
+            "Pink Cake",
+            "Snail"
+        ],
+        "likes": [
+            "All Universal Likes (except Triple Shot Espresso, Vegetables and Artisan Goods other than Honey, Jelly, & Oil)",
+            "Coconut",
+            "Daffodil"
+        ],
+        "birthday": "Spring 10",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Vincent.png"
+    },
+    "Willy": {
+        "loves": [
+            "All Universal Loves",
+            "Catfish",
+            "Diamond",
+            "Iridium Bar",
+            "Mead",
+            "Octopus",
+            "Pumpkin",
+            "Sea Cucumber",
+            "Sturgeon"
+        ],
+        "likes": [
+            "All Universal Likes (except Life Elixir, and All Cooking except for the fish dishes he is neutral towards: Dish O' The Sea, Maki Roll, & Sashimi; and the fish dishes he likes, shown below)",
+            "Gold Bar",
+            "Quartz",
+            "Lingcod",
+            "Tiger Trout",
+            "Baked Fish",
+            "Carp Surprise",
+            "Chowder",
+            "Crab Cakes",
+            "Crispy Bass",
+            "Fish Stew",
+            "Fish Taco",
+            "Fried Calamari",
+            "Fried Eel",
+            "Lobster Bisque",
+            "Salmon Dinner",
+            "Seafoam Pudding",
+            "Trout Soup"
+        ],
+        "birthday": "Winter 24",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/82/Willy.png"
+    },
+    "Wizard": {
+        "loves": [
+            "All Universal Loves",
+            "Purple Mushroom",
+            "Solar Essence",
+            "Super Cucumber",
+            "Void Essence"
+        ],
+        "likes": [
+            "All Universal Likes",
+            "All Geode Minerals",
+            "Quartz"
+        ],
+        "birthday": "Winter 17",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/c7/Wizard.png"
+    }
+    
+}

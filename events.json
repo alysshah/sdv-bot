@@ -1,0 +1,56 @@
+{
+    "Spring": {
+        "1": ["Kent's Birthday"],
+        "4": ["Lewis' Birthday"],
+        "7": ["Vincent's Birthday"],
+        "10": ["Egg Festival"],
+        "13": ["Haley's Birthday"],
+        "14": ["Salmonberry Season Starts"],
+        "15": ["Shane's Birthday"],
+        "18": ["Pam's Birthday"],
+        "20": ["Shane's Birthday"],
+        "24": ["Flower Dance"],
+        "26": ["Pierre's Birthday"],
+        "27": ["Emily's Birthday"]
+    },
+    "Summer": {
+        "4": ["Jas' Birthday"],
+        "8": ["Gus' Birthday"],
+        "10": ["Maru's Birthday"],
+        "11": ["Luau"],
+        "13": ["Abigail's Birthday"],
+        "17": ["Sam's Birthday"],
+        "19": ["Dwarf's Birthday"],
+        "22": ["Willy's Birthday"],
+        "24": ["Dance of the Moonlight Jellies"],
+        "26": ["George's Birthday"],
+        "28": ["Ninja's Birthday"]
+    },
+    "Fall": {
+        "2": ["Penny's Birthday"],
+        "5": ["Elliott's Birthday"],
+        "11": ["Jodi's Birthday"],
+        "13": ["Abigail's Birthday"],
+        "15": ["Sandy's Birthday"],
+        "16": ["Stardew Valley Fair"],
+        "18": ["Marnie's Birthday"],
+        "21": ["Robin's Birthday"],
+        "24": ["George's Birthday"],
+        "27": ["Spirit's Eve"]
+    },
+    "Winter": {
+        "1": ["Krobus' Birthday"],
+        "3": ["Linus' Birthday"],
+        "7": ["Caroline's Birthday"],
+        "8": ["Festival of Ice"],
+        "10": ["Sebastian's Birthday"],
+        "14": ["Harvey's Birthday"],
+        "15": ["Wizard's Birthday"],
+        "17": ["Evelyn's Birthday"],
+        "20": ["Leah's Birthday"],
+        "23": ["Night Market Day 1 (Start)"],
+        "24": ["Night Market Day 2"],
+        "25": ["Night Market Day 3 (End)"],
+        "26": ["Clint's Birthday"]
+    }
+}

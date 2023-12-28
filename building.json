@@ -1,0 +1,74 @@
+{
+    "Barn": {
+        "cost": ["6,000g", "350 Wood", "150 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f8/Barn.png/144px-Barn.png"
+    },
+    "Big Barn": {
+        "cost": ["12,000g", "450 Wood", "200 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Big_Barn.png/144px-Big_Barn.png"
+    },
+    "Deluxe Barn": {
+        "cost": ["25,000g", "550 Wood", "300 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3d/Deluxe_Barn.png/144px-Deluxe_Barn.png"
+    },
+    "Coop": {
+        "cost": ["4,000g", "300 Wood", "100 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/4/48/Coop.png/144px-Coop.png"
+    },
+    "Big Coop": {
+        "cost": ["10,000g", "400 Wood", "150 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d5/Big_Coop.png/144px-Big_Coop.png"
+    },
+    "Deluxe Coop": {
+        "cost": ["20,000g", "500 Wood", "200 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/5/51/Deluxe_Coop.png/144px-Deluxe_Coop.png"
+    },
+    "Fish Pond": {
+        "cost": ["5,000g", "200 Stone", "5 Seawood", "5 Green Algae"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/6/65/Fish_Pond.png/144px-Fish_Pond.png"
+    },
+    "Mill": {
+        "cost": ["2,500g", "150 Wood", "50 Stone", "4 Cloth"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/90/Mill.png/120px-Mill.png"
+    },
+    "Shed": {
+        "cost": ["15,000g", "300 Wood"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/15/Shed.png/144px-Shed.png"
+    },
+    "Big Shed": {
+        "cost": ["20,000g", "550 Wood", "300 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d0/Big_Shed.png/144px-Big_Shed.png"
+    },
+    "Silo": {
+        "cost": ["100g", "100 Stone", "10 Clay", "5 Copper Bar"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/5/5f/Silo.png/120px-Silo.png"
+    },
+    "Slime Hutch": {
+        "cost": ["10,000g", "500 Stone", "10 Refined Quartz", "1 Iridium Bar"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/22/Slime_Hutch.png/144px-Slime_Hutch.png"
+    },
+    "Stable": {
+        "cost": ["10,000g", "100 Hardwood", "5 Iron Bar"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/2/24/Horse_Stable.png"
+    },
+    "Well": {
+        "cost": ["1,000g", "75 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/4/41/Well.png/144px-Well.png"
+    },
+    "Stone Cabin": {
+        "cost": ["100g", "10 Stone"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d0/Stone_Cabin_Stage_1.png/144px-Stone_Cabin_Stage_1.png"
+    },
+    "Plank Cabin": {
+        "cost": ["100g", "5 Wood", "10 Fiber"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/ad/Plank_Cabin_Stage_1.png/144px-Plank_Cabin_Stage_1.png"
+    },
+    "Log Cabin": {
+        "cost": ["100g", "10 Wood"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/13/Log_Cabin_Stage_1.png/144px-Log_Cabin_Stage_1.png"
+    },
+    "Shipping Bin": {
+        "cost": ["250g", "150 Wood"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/ShippingBox.png"
+    }
+}
