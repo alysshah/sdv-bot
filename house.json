@@ -1,45 +1,66 @@
 {
-    "House Upgrades": {
-        "Upgrade 1": ["10,000g, 450 Wood"],
-        "Upgrade 2": ["65,000g, 100 Hardwood"],
-        "Upgrade 3": ["100,000g"]
-    },
-    "House Renovations": {
-        "Remove Crib": {
+    "House Upgrades": [
+        {
+            "name": "Upgrade 1",
+            "cost": ["10,000g", "450 Wood"],
+            "description": "Increase house size and adds a Kitchen."
+        },
+        {
+            "name": "Upgrade 2",
+            "cost": ["65,000g", "100 Hardwood"],
+            "description": "Adds two new rooms, one empty, and one with a crib and two single beds. This allows you to have two children. Both the kitchen and the bedroom are larger. Unlocks renovations and building/trim painting."
+        },
+        {
+            "name": "Upgrade 3",
+            "cost": ["100,000g"],
+            "description": "Adds a cellar under the house, allowing access via the kitchen. The cellar allows the player to craft and house Casks which can age specific products to increase their quality and value. The exterior appearance of the house remains identical."
+        }
+    ],
+    "House Renovations": [
+        {
+            "name": "Remove Crib",
             "cost": "Free",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3a/Cribless_Nursery.png/500px-Cribless_Nursery.png"
         },
-        "Open Bedroom": {
+        {
+            "name": "Open Bedroom",
             "cost": "10,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c1/Divider.png/500px-Divider.png"
         },
-        "Add Southern Room": {
+        {
+            "name": "Add Southern Room",
             "cost": "30,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/ab/Southern_Room.png/500px-Southern_Room.png"
         },
-        "Add Corner Room": {
+        {
+            "name": "Add Corner Room",
             "cost": "20,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f5/Corner_Room.png/500px-Corner_Room.png"
         },
-        "Add Dining Room": {
+        {
+            "name": "Add Dining Room",
             "cost": "150,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/a0/Dining-room.png/500px-Dining-room.png"
         },
-        "Add Cubby": {
+        {
+            "name": "Add Cubby",
             "cost": "10,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/1e/Cubby.png/500px-Cubby.png"
         },
-        "Add Attic": {
+        {
+            "name": "Add Attic",
             "cost": "60,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/bb/Attic.png/500px-Attic.png"
         },
-        "Expand Corner Room": {
+        {
+            "name": "Expand Corner Room",
             "cost": "100,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/30/Larger-corner-room.png/500px-Larger-corner-room.png"
         },
-        "Open Dining Room": {
+        {
+            "name": "Open Dining Room",
             "cost": "10,000g",
             "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/6/6d/Open-dining.png/500px-Open-dining.png"
         }
-    }
+    ]
 }

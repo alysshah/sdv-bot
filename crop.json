@@ -164,8 +164,8 @@
         ],
         "profit_scenarios": ["9.23g/d"]
     },
-    "Straberry": {
-        "name": "Straberry",
+    "Strawberry": {
+        "name": "Strawberry",
         "image": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png",
         "seasons": ["Spring"],
         "growth_time": "8 days initial, 4 days regrowth",

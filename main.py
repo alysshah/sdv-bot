@@ -196,11 +196,11 @@ async def house(ctx, category: str = None):
                 color=0x8B4513
             )
             
-            for i, upgrade in enumerate(upgrades, 1):
-                cost_formatted = ', '.join(upgrade["cost"])
+            for upgrade_name, upgrade_cost in upgrades.items():
+                cost_formatted = ', '.join(upgrade_cost) if isinstance(upgrade_cost, list) else upgrade_cost
                 embed.add_field(
-                    name=f"{upgrade['name']} - {cost_formatted}",
-                    value=upgrade["description"],
+                    name=f"{upgrade_name} - {cost_formatted}",
+                    value="House upgrade",
                     inline=False
                 )
             
@@ -219,12 +219,12 @@ async def house(ctx, category: str = None):
                 color=0xA6571F
             )
             
-            for renovation in renovations:
-                cost = renovation["cost"] if isinstance(renovation["cost"], str) else ', '.join(renovation["cost"])
+            for renovation_name, renovation_cost in renovations.items():
+                cost_formatted = renovation_cost if isinstance(renovation_cost, str) else ', '.join(renovation_cost)
                 # Use shorter field names and values for grid layout (inline fields)
                 embed.add_field(
-                    name=renovation['name'],
-                    value=cost,
+                    name=renovation_name,
+                    value=cost_formatted,
                     inline=True
                 )
             
