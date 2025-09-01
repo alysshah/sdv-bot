@@ -187,8 +187,8 @@ async def house(ctx, category: str = None):
     
     category = category.lower()
     
-    try:
-        if category == "upgrades":
+    if category == "upgrades":
+        if "House Upgrades" in house_data:
             upgrades = house_data["House Upgrades"]
             embed = discord.Embed(
                 title="House Upgrades",
@@ -196,11 +196,11 @@ async def house(ctx, category: str = None):
                 color=0x8B4513
             )
             
-            for upgrade_name, upgrade_cost in upgrades.items():
-                cost_formatted = ', '.join(upgrade_cost) if isinstance(upgrade_cost, list) else upgrade_cost
+            for upgrade in upgrades:
+                cost_formatted = '\n'.join(f'- {item}' for item in upgrade["cost"])
                 embed.add_field(
-                    name=f"{upgrade_name} - {cost_formatted}",
-                    value="House upgrade",
+                    name=f"🏠 {upgrade['name']}",
+                    value=f"{cost_formatted}\n\n*{upgrade['description']}*",
                     inline=False
                 )
             
@@ -210,8 +210,11 @@ async def house(ctx, category: str = None):
             view.add_item(button)
             
             await ctx.send(embed=embed, view=view)
+        else:
+            await ctx.send("House upgrade data not available.")
             
-        elif category == "renovations":
+    elif category == "renovations":
+        if "House Renovations" in house_data:
             renovations = house_data["House Renovations"]
             embed = discord.Embed(
                 title="House Renovations",
@@ -219,12 +222,10 @@ async def house(ctx, category: str = None):
                 color=0xA6571F
             )
             
-            for renovation_name, renovation_cost in renovations.items():
-                cost_formatted = renovation_cost if isinstance(renovation_cost, str) else ', '.join(renovation_cost)
-                # Use shorter field names and values for grid layout (inline fields)
+            for renovation in renovations:
                 embed.add_field(
-                    name=renovation_name,
-                    value=cost_formatted,
+                    name=renovation["name"],
+                    value=renovation["cost"],
                     inline=True
                 )
             
@@ -234,13 +235,11 @@ async def house(ctx, category: str = None):
             view.add_item(button)
             
             await ctx.send(embed=embed, view=view)
-            
         else:
-            await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
-    
-    except Exception as e:
-        await ctx.send(f"Error: {str(e)}")
-        print(f"House command error: {e}")
+            await ctx.send("House renovation data not available.")
+            
+    else:
+        await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
 
 #####CROP COMMAND#################################
 
