@@ -28,10 +28,19 @@ with open('building.json', 'r') as file:
 with open('events.json', 'r') as file:
     events_data = json.load(file)
 
+# Load house data
+with open('house.json', 'r') as file:
+    house_data = json.load(file)
+
+# Load crop data
+with open('crop.json', 'r') as file:
+    crop_data = json.load(file)
+
 #####GIFT COMMAND#################################
 
 @bot.command(name='gift')
 async def gift(ctx, townsperson: str):
+    """Shows loved and liked gifts for a villager"""
     townsperson = townsperson.capitalize()
     if townsperson in townspeople_data:
         data = townspeople_data[townsperson]
@@ -45,8 +54,8 @@ async def gift(ctx, townsperson: str):
         # Format the loves and likes as a bulleted list
         loves_formatted = '\n'.join(f'- {item}' for item in data["loves"])
         likes_formatted = '\n'.join(f'- {item}' for item in data["likes"])
-        embed.add_field(name="Loves", value=loves_formatted, inline=True)
-        embed.add_field(name="Likes", value=likes_formatted, inline=True)
+        embed.add_field(name="💝 Loves", value=loves_formatted, inline=True)
+        embed.add_field(name="👍 Likes", value=likes_formatted, inline=True)
 
         # Create a button linking to the wiki
         button = discord.ui.Button(label="View All Gifts on Wiki", url="https://stardewvalleywiki.com/List_of_All_Gifts")
@@ -61,6 +70,7 @@ async def gift(ctx, townsperson: str):
         
 @bot.command(name='char')
 async def char(ctx, townsperson: str):
+    """Shows character profile including birthday"""
     townsperson = townsperson.capitalize()
     if townsperson in townspeople_data:
         data = townspeople_data[townsperson]
@@ -70,7 +80,7 @@ async def char(ctx, townsperson: str):
         )
         #embed.set_author(name=townsperson, icon_url=data["image"])
         embed.set_thumbnail(url=data["image"])
-        embed.add_field(name="Birthday", value=data["birthday"], inline=False)
+        embed.add_field(name="🎂 Birthday", value=data["birthday"], inline=False)
 
         await ctx.send(embed=embed)
     else:
@@ -80,6 +90,7 @@ async def char(ctx, townsperson: str):
         
 @bot.command(name='build')
 async def build(ctx, *building: str):
+    """Shows materials and cost for farm buildings"""
     building = " ".join(building).title()
     if building in building_data:
         data = building_data[building]
@@ -90,7 +101,7 @@ async def build(ctx, *building: str):
 
         # Format the loves and likes as a bulleted list
         cost_formatted = '\n'.join(f'- {item}' for item in data["cost"])
-        embed.add_field(name="Materials", value=cost_formatted, inline=False)
+        embed.add_field(name="🔨 Materials", value=cost_formatted, inline=False)
         embed.set_thumbnail(url=data["image"])
 
         # Create a button linking to the wiki
@@ -105,7 +116,8 @@ async def build(ctx, *building: str):
 #####EVENT COMMAND#################################
 
 @bot.command(name='events')
-async def events(ctx, season, day=None): 
+async def events(ctx, season, day=None):
+    """Shows events for a season or specific day""" 
     season = season.capitalize()
 
     # If day parameter IS NOT provided --> show all events in season
@@ -119,7 +131,7 @@ async def events(ctx, season, day=None):
             events_formatted = " "
             for day in data:
                 events_formatted += '\n'.join(f'- {day}: {event}\n' for event in data[day])
-            embed.add_field(name="Event(s)", value=events_formatted, inline=False)
+            embed.add_field(name="🎉 Event(s)", value=events_formatted, inline=False)
 
             await ctx.send(embed=embed)
         else:
@@ -138,13 +150,140 @@ async def events(ctx, season, day=None):
                 data = events_data[season]
                 if day in data:
                     events_formatted = '\n'.join(f'- {item}' for item in data[day])
-                    embed.add_field(name="Event(s)", value=events_formatted, inline=False)
+                    embed.add_field(name="🎉 Event(s)", value=events_formatted, inline=False)
                 else:
-                    embed.add_field(name="Event(s)", value="No events", inline=False)
+                    embed.add_field(name="🎉 Event(s)", value="No events", inline=False)
 
                 await ctx.send(embed=embed)
         else:
             await ctx.send(f"No data available for this date.")
+
+#####HOUSE COMMAND#################################
+
+@bot.command(name='house')
+async def house(ctx, category: str = None):
+    """Shows house upgrades or renovations (use 'upgrades' or 'renovations')"""
+    if category is None:
+        await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
+        return
+    
+    category = category.lower()
+    
+    if category == "upgrades":
+        upgrades = house_data["House Upgrades"]
+        embed = discord.Embed(
+            title="House Upgrades",
+            description="Sequential upgrades for your farmhouse (must be done in order)",
+            color=0x8B4513
+        )
+        
+        for i, upgrade in enumerate(upgrades, 1):
+            cost_formatted = ', '.join(upgrade["cost"])
+            embed.add_field(
+                name=f"{upgrade['name']} - {cost_formatted}",
+                value=upgrade["description"],
+                inline=False
+            )
+        
+        # Create a button linking to the wiki
+        button = discord.ui.Button(label="View All House Upgrades on Wiki", url="https://stardewvalleywiki.com/Farmhouse#Upgrades")
+        view = discord.ui.View()
+        view.add_item(button)
+        
+        await ctx.send(embed=embed, view=view)
+        
+    elif category == "renovations":
+        renovations = house_data["House Renovations"]
+        embed = discord.Embed(
+            title="House Renovations",
+            description="Optional room additions (requires House Upgrade 2)",
+            color=0xA6571F
+        )
+        
+        for renovation in renovations:
+            cost = renovation["cost"] if isinstance(renovation["cost"], str) else ', '.join(renovation["cost"])
+            # Use shorter field names and values for grid layout (inline fields)
+            embed.add_field(
+                name=renovation['name'],
+                value=cost,
+                inline=True
+            )
+        
+        # Create a button linking to the wiki
+        button = discord.ui.Button(label="View All Renovations on Wiki", url="https://stardewvalleywiki.com/Farmhouse#Renovations")
+        view = discord.ui.View()
+        view.add_item(button)
+        
+        await ctx.send(embed=embed, view=view)
+        
+    else:
+        await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
+
+#####CROP COMMAND#################################
+
+@bot.command(name='crop')
+async def crop(ctx, *, crop_name: str):
+    """Shows detailed crop information including seasons, growth time, and profit"""
+    # Handle case-insensitive matching
+    crop_name_formatted = None
+    for key in crop_data.keys():
+        if key.lower() == crop_name.lower():
+            crop_name_formatted = key
+            break
+    
+    if crop_name_formatted and crop_name_formatted in crop_data:
+        data = crop_data[crop_name_formatted]
+        embed = discord.Embed(
+            title=f"Crop Info: {data['name']}",
+            color=0x6FDE4B
+        )
+        
+        # Set thumbnail image
+        embed.set_thumbnail(url=data["image"])
+        
+        # Seasons
+        seasons_text = ', '.join(data["seasons"])
+        embed.add_field(name="🌱 Seasons", value=seasons_text, inline=True)
+        
+        # Growth time
+        embed.add_field(name="⏱️ Growth Time", value=data["growth_time"], inline=True)
+        
+        # Prices
+        prices = data["prices"]
+        price_parts = []
+        if "base" in prices:
+            price_parts.append(f"Base: {prices['base']}g")
+        if "silver" in prices:
+            price_parts.append(f"Silver: {prices['silver']}g")
+        if "gold" in prices:
+            price_parts.append(f"Gold: {prices['gold']}g")
+        if "iridium" in prices:
+            price_parts.append(f"Iridium: {prices['iridium']}g")
+        
+        price_text = ' | '.join(price_parts)
+        embed.add_field(name="💰 Sell Prices", value=price_text, inline=False)
+        
+        # Seed sources
+        if data.get("seed_sources"):
+            seed_parts = []
+            for source in data["seed_sources"]:
+                seed_parts.append(source["source"])
+            seed_text = ' | '.join(seed_parts)
+            embed.add_field(name="🌰 Seed Sources", value=seed_text, inline=True)
+        
+        # Profit scenarios
+        if data.get("profit_scenarios"):
+            profit_text = ' | '.join(data["profit_scenarios"])
+            embed.add_field(name="📈 Profit", value=profit_text, inline=True)
+        
+        # Create a button linking to the wiki
+        button = discord.ui.Button(label="View All Crops on Wiki", url="https://stardewvalleywiki.com/Crops")
+        view = discord.ui.View()
+        view.add_item(button)
+        
+        await ctx.send(embed=embed, view=view)
+    else:
+        await ctx.send(f"No data available for '{crop_name}'.")
 
 
 bot.run(os.getenv('BOT_TOKEN'))

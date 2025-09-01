@@ -55,20 +55,20 @@
         "cost": ["1,000g", "75 Stone"],
         "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/4/41/Well.png/144px-Well.png"
     },
-    "Stone Cabin": {
-        "cost": ["100g", "10 Stone"],
-        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d0/Stone_Cabin_Stage_1.png/144px-Stone_Cabin_Stage_1.png"
+    "Cabin": {
+        "cost": ["100g"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/ad/Plank_Cabin_Stage_1.png"
     },
     "Plank Cabin": {
         "cost": ["100g", "5 Wood", "10 Fiber"],
         "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/ad/Plank_Cabin_Stage_1.png/144px-Plank_Cabin_Stage_1.png"
     },
-    "Log Cabin": {
-        "cost": ["100g", "10 Wood"],
-        "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/13/Log_Cabin_Stage_1.png/144px-Log_Cabin_Stage_1.png"
-    },
     "Shipping Bin": {
         "cost": ["250g", "150 Wood"],
         "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/ShippingBox.png"
+    },
+    "Pet Bowl": {
+        "cost": ["5,000g", "25 Hardwood"],
+        "image": "https://stardewvalleywiki.com/mediawiki/images/0/05/Pet_Bowl_Wood.png"
     }
 }

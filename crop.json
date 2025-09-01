@@ -1,0 +1,750 @@
+{
+    "Blue Jazz": {
+        "name": "Blue Jazz",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/2/2f/Blue_Jazz.png",
+        "seasons": ["Spring"],
+        "growth_time": "7 days",
+        "prices": {
+          "base": 50,
+          "silver": 62,
+          "gold": 75,
+          "iridium": 100
+        },
+        "seed_sources": [
+            {"source": "Pierre's (30g)"},
+            {"source": "JojaMart (37g)"}
+        ],
+        "profit_scenarios": ["2.86g/d"]
+    },
+    "Carrot": {
+        "name": "Carrot",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/c3/Carrot.png",
+        "seasons": ["Spring"],
+        "growth_time": "3 days",
+        "prices": {
+          "base": 35,
+          "silver": 43,
+          "gold": 52,
+          "iridium": 70
+        },
+        "seed_sources": null,
+        "profit_scenarios": ["11.67g/d"]
+    },
+    "Cauliflower": {
+        "name": "Cauliflower",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png",
+        "seasons": ["Spring"],
+        "growth_time": "12 days",
+        "prices": {
+          "base": 175,
+          "silver": 218,
+          "gold": 262,
+          "iridium": 350
+        },
+        "seed_sources": [
+            {"source": "Pierre's (80g)"},
+            {"source": "JojaMart (100g)"}
+        ],
+        "profit_scenarios": ["7.92g/d"]
+    },
+    "Coffee Bean": {
+        "name": "Coffee Bean",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/3/33/Coffee_Bean.png",
+        "seasons": ["Spring", "Summer"],
+        "growth_time": "10 days initial, 2 days regrowth",
+        "prices": {
+          "base": 15,
+          "silver": 18,
+          "gold": 22,
+          "iridium": 30
+        },
+        "seed_sources": [
+            {"source": "Traveling Cart (2,500g)"},
+            {"source": "Dust Sprite (1% chance)"}
+        ],
+        "profit_scenarios": ["-20.74g/d (Traveling Cart, 2 seasons)", "20.77g/d (Dust Sprite, 1 season)", "25.56g/d (Dust Sprite, 2 seasons)"]
+    },
+    "Garlic": {
+        "name": "Garlic",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/cc/Garlic.png",
+        "seasons": ["Spring"],
+        "growth_time": "4 days",
+        "prices": {
+          "base": 60,
+          "silver": 75,
+          "gold": 90,
+          "iridium": 120
+        },
+        "seed_sources": [
+            {"source": "Pierre's (40g)"}
+        ],
+        "profit_scenarios": ["5g/d"]
+    },
+    "Green Bean": {
+        "name": "Green Bean",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png",
+        "seasons": ["Spring"],
+        "growth_time": "10 days initial, 3 days regrowth",
+        "prices": {
+          "base": 40,
+          "silver": 50,
+          "gold": 60,
+          "iridium": 80
+        },
+        "seed_sources": [
+            {"source": "Pierre's (60g)"},
+            {"source": "JojaMart (75g)"}
+        ],
+        "profit_scenarios": ["7.2g/d"]
+    },
+    "Kale": {
+        "name": "Kale",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/d1/Kale.png",
+        "seasons": ["Spring"],
+        "growth_time": "6 days",
+        "prices": {
+          "base": 110,
+          "silver": 137,
+          "gold": 165,
+          "iridium": 220
+        },
+        "seed_sources": [
+            {"source": "Pierre's (70g)"},
+            {"source": "JojaMart (87g)"}
+        ],
+        "profit_scenarios": ["6.67g/d"]
+    },
+    "Parsnip": {
+        "name": "Parsnip",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png",
+        "seasons": ["Spring"],
+        "growth_time": "4 days",
+        "prices": {
+          "base": 35,
+          "silver": 43,
+          "gold": 52,
+          "iridium": 70
+        },
+        "seed_sources": [
+            {"source": "Pierre's (20g)"},
+            {"source": "JojaMart (25g)"}
+        ],
+        "profit_scenarios": ["3.75g/d"]
+    },
+    "Potato": {
+        "name": "Potato",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png",
+        "seasons": ["Spring"],
+        "growth_time": "6 days",
+        "prices": {
+          "base": 80,
+          "silver": 100,
+          "gold": 120,
+          "iridium": 160
+        },
+        "seed_sources": [
+            {"source": "Pierre's (50g)"},
+            {"source": "JojaMart (62g)"}
+        ],
+        "profit_scenarios": ["5g/d (1 potato per harvest)", "8.33g/d (1.25 potatoes per harvest)"]
+    },
+    "Rhubarb": {
+        "name": "Rhubarb",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png",
+        "seasons": ["Spring"],
+        "growth_time": "13 days",
+        "prices": {
+          "base": 220,
+          "silver": 275,
+          "gold": 330,
+          "iridium": 440
+        },
+        "seed_sources": [
+            {"source": "Oasis (100g)"}
+        ],
+        "profit_scenarios": ["9.23g/d"]
+    },
+    "Straberry": {
+        "name": "Straberry",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png",
+        "seasons": ["Spring"],
+        "growth_time": "8 days initial, 4 days regrowth",
+        "prices": {
+          "base": 120,
+          "silver": 150,
+          "gold": 180,
+          "iridium": 240
+        },
+        "seed_sources": [
+            {"source": "Egg Festival (100g)"}
+        ],
+        "profit_scenarios": ["20.83g/d (Planted on Spring 1)", "11.67g/d (Planted on Spring 13/14)"]
+    },
+    "Tulip": {
+        "name": "Tulip",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/cf/Tulip.png",
+        "seasons": ["Spring"],
+        "growth_time": "6 days",
+        "prices": {
+          "base": 30,
+          "silver": 37,
+          "gold": 45,
+          "iridium": 60
+        },
+        "seed_sources": [
+            {"source": "Pierre's (20g)"},
+            {"source": "JojaMart (25g)"}
+        ],
+        "profit_scenarios": ["1.67g/d"]
+    },
+    "Unmilled Rice": {
+        "name": "Unmilled Rice",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/fe/Unmilled_Rice.png",
+        "seasons": ["Spring"],
+        "growth_time": "6 days irrigated, 8 days unirrigated",
+        "prices": {
+          "base": 30,
+          "silver": 37,
+          "gold": 45,
+          "iridium": 60
+        },
+        "seed_sources": [
+            {"source": "Pierre's (40g)"}
+        ],
+        "profit_scenarios": ["-1.25g/d (Unirrigated)", "-1.67g/d (Irrigated)"]
+    },
+    "Blueberry": {
+        "name": "Blueberry",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/9e/Blueberry.png",
+        "seasons": ["Summer"],
+        "growth_time": "13 days initial, 4 days regrowth",
+        "prices": {
+          "base": 50,
+          "silver": 62,
+          "gold": 75,
+          "iridium": 100
+        },
+        "seed_sources": [
+            {"source": "Pierre's (80g)"}
+        ],
+        "profit_scenarios": ["20.8g/d"]
+    },
+    "Corn": {
+        "name": "Corn",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png",
+        "seasons": ["Summer", "Fall"],
+        "growth_time": "14 days initial, 4 days regrowth",
+        "prices": {
+          "base": 50,
+          "silver": 62,
+          "gold": 75,
+          "iridium": 100
+        },
+        "seed_sources": [
+            {"source": "Pierre's (150g)"},
+            {"source": "JojaMart (187g)"}
+        ],
+        "profit_scenarios": ["1.92g/d (1 season)", "7.41g/d (2 seasons)"]
+    },
+    "Hops": {
+        "name": "Hops",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/59/Hops.png",
+        "seasons": ["Summer"],
+        "growth_time": "11 days initial, 1 day regrowth",
+        "prices": {
+          "base": 25,
+          "silver": 31,
+          "gold": 37,
+          "iridium": 50
+        },
+        "seed_sources": [
+            {"source": "Pierre's (60g)"},
+            {"source": "JojaMart (75g)"}
+        ],
+        "profit_scenarios": ["13.52g/d"]
+    },
+    "Hot Pepper": {
+        "name": "Hot Pepper",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png",
+        "seasons": ["Summer"],
+        "growth_time": "5 days initial, 3 days regrowth",
+        "prices": {
+          "base": 40,
+          "silver": 50,
+          "gold": 60,
+          "iridium": 80
+        },
+        "seed_sources": [
+            {"source": "Pierre's (40g)"},
+            {"source": "JojaMart (50g)"}
+        ],
+        "profit_scenarios": ["10.77g/d"]
+    },
+    "Melon": {
+        "name": "Melon",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png",
+        "seasons": ["Summer"],
+        "growth_time": "12 days",
+        "prices": {
+          "base": 250,
+          "silver": 312,
+          "gold": 375,
+          "iridium": 500
+        },
+        "seed_sources": [
+            {"source": "Pierre's (80g)"},
+            {"source": "JojaMart (100g)"}
+        ],
+        "profit_scenarios": ["14.17g/d"]
+    },
+    "Poppy": {
+        "name": "Poppy",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/3/37/Poppy.png",
+        "seasons": ["Summer"],
+        "growth_time": "7 days",
+        "prices": {
+          "base": 140,
+          "silver": 175,
+          "gold": 210,
+          "iridium": 280
+        },
+        "seed_sources": [
+            {"source": "Pierre's (100g)"},
+            {"source": "JojaMart (125g)"}
+        ],
+        "profit_scenarios": ["5.71g/d"]
+    },
+    "Radish": {
+        "name": "Radish",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Radish.png",
+        "seasons": ["Summer"],
+        "growth_time": "6 days",
+        "prices": {
+          "base": 90,
+          "silver": 112,
+          "gold": 135,
+          "iridium": 180
+        },
+        "seed_sources": [
+            {"source": "Pierre's (40g)"},
+            {"source": "JojaMart (50g)"}
+        ],
+        "profit_scenarios": ["8.33g/d"]
+    },
+    "Red Cabbage": {
+        "name": "Red Cabbage",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png",
+        "seasons": ["Summer"],
+        "growth_time": "9 days",
+        "prices": {
+          "base": 260,
+          "silver": 325,
+          "gold": 390,
+          "iridium": 520
+        },
+        "seed_sources": [
+            {"source": "Pierre's (100g)"}
+        ],
+        "profit_scenarios": ["17.78g/d"]
+    },
+    "Starfruit": {
+        "name": "Starfruit",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png",
+        "seasons": ["Summer"],
+        "growth_time": "13 days initial",
+        "prices": {
+          "base": 750,
+          "silver": 937,
+          "gold": 1125,
+          "iridium": 1500
+        },
+        "seed_sources": [
+            {"source": "Oasis (400g)"}
+        ],
+        "profit_scenarios": ["26.92g/d"]
+    },
+    "Summer Spangle": {
+        "name": "Summer Spangle",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/9f/Summer_Spangle.png",
+        "seasons": ["Summer"],
+        "growth_time": "8 days",
+        "prices": {
+          "base": 90,
+          "silver": 112,
+          "gold": 135,
+          "iridium": 180
+        },
+        "seed_sources": [
+            {"source": "Pierre's (50g)"},
+            {"source": "JojaMart (62g)"}
+        ],
+        "profit_scenarios": ["5g/d"]
+    },
+    "Summer Squash": {
+        "name": "Summer Squash",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/4/43/Summer_Squash.png",
+        "seasons": ["Summer"],
+        "growth_time": "6 days initial, 3 days regrowth",
+        "prices": {
+          "base": 45,
+          "silver": 56,
+          "gold": 67,
+          "iridium": 90
+        },
+        "seed_sources": null,
+        "profit_scenarios": ["13.33g/d"]
+    },
+    "Sunflower": {
+        "name": "Sunflower",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/81/Sunflower.png",
+        "seasons": ["Summer"],
+        "growth_time": "8 days",
+        "prices": {
+          "base": 80,
+          "silver": 100,
+          "gold": 120,
+          "iridium": 160
+        },
+        "seed_sources": [
+            {"source": "Pierre's (200g)"},
+            {"source": "JojaMart (125g)"}
+        ],
+        "profit_scenarios": ["-15g/d (Pierre's)", "-5.63g/d (JojaMart)"]
+    },
+    "Tomato": {
+        "name": "Tomato",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png",
+        "seasons": ["Summer"],
+        "growth_time": "11 days initial, 4 days regrowth",
+        "prices": {
+          "base": 60,
+          "silver": 75,
+          "gold": 90,
+          "iridium": 120
+        },
+        "seed_sources": [
+            {"source": "Pierre's (50g)"},
+            {"source": "JojaMart (62g)"}
+        ],
+        "profit_scenarios": ["9.26g/d"]
+    },
+    "Wheat": {
+        "name": "Wheat",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/e/e2/Wheat.png",
+        "seasons": ["Summer", "Fall"],
+        "growth_time": "4 days",
+        "prices": {
+          "base": 25,
+          "silver": 31,
+          "gold": 37,
+          "iridium": 50
+        },
+        "seed_sources": [
+            {"source": "Pierre's (10g)"},
+            {"source": "JojaMart (12g)"}
+        ],
+        "profit_scenarios": ["3.75g/d"]
+    },
+    "Amaranth": {
+        "name": "Amaranth",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f6/Amaranth.png",
+        "seasons": ["Fall"],
+        "growth_time": "7 days",
+        "prices": {
+          "base": 150,
+          "silver": 187,
+          "gold": 225,
+          "iridium": 300
+        },
+        "seed_sources": [
+            {"source": "Pierre's (70g)"},
+            {"source": "JojaMart (87g)"}
+        ],
+        "profit_scenarios": ["11.43g/d"]
+    },
+    "Artichoke": {
+        "name": "Artichoke",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Artichoke.png",
+        "seasons": ["Fall"],
+        "growth_time": "8 days",
+        "prices": {
+          "base": 160,
+          "silver": 200,
+          "gold": 240,
+          "iridium": 320
+        },
+        "seed_sources": [
+            {"source": "Pierre's (30g)"}
+        ],
+        "profit_scenarios": ["16.25g/d"]
+    },
+    "Beet": {
+        "name": "Beet",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/a4/Beet.png",
+        "seasons": ["Fall"],
+        "growth_time": "6 days",
+        "prices": {
+          "base": 100,
+          "silver": 125,
+          "gold": 150,
+          "iridium": 200
+        },
+        "seed_sources": [
+            {"source": "Oasis (20g)"}
+        ],
+        "profit_scenarios": ["13.33g/d"]
+    },
+    "Bok Choy": {
+        "name": "Bok Choy",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/4/40/Bok_Choy.png",
+        "seasons": ["Fall"],
+        "growth_time": "4 days",
+        "prices": {
+          "base": 80,
+          "silver": 100,
+          "gold": 120,
+          "iridium": 160
+        },
+        "seed_sources": [
+            {"source": "Pierre's (50g)"},
+            {"source": "JojaMart (62g)"}
+        ],
+        "profit_scenarios": ["7.5g/d"]
+    },
+    "Broccoli": {
+        "name": "Broccoli",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Broccoli.png",
+        "seasons": ["Fall"],
+        "growth_time": "8 days initial, 4 days regrowth",
+        "prices": {
+          "base": 70,
+          "silver": 87,
+          "gold": 105,
+          "iridium": 140
+        },
+        "seed_sources": null,
+        "profit_scenarios": ["14.58g/d"]
+    },
+    "Cranberries": {
+        "name": "Cranberries",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png",
+        "seasons": ["Fall"],
+        "growth_time": "7 days initial, 5 days regrowth",
+        "prices": {
+          "base": 75,
+          "silver": 93,
+          "gold": 112,
+          "iridium": 150
+        },
+        "seed_sources": [
+            {"source": "Pierre's (240g)"},
+            {"source": "JojaMart (300g)"}
+        ],
+        "profit_scenarios": ["18.89g/d"]
+    },
+    "Eggplant": {
+        "name": "Eggplant",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png",
+        "seasons": ["Fall"],
+        "growth_time": "5 days initial, 5 days regrowth",
+        "prices": {
+          "base": 60,
+          "silver": 75,
+          "gold": 90,
+          "iridium": 120
+        },
+        "seed_sources": [
+            {"source": "Pierre's (20g)"},
+            {"source": "JojaMart (25g)"}
+        ],
+        "profit_scenarios": ["11.2g/d"]
+    },
+    "Fairy Rose": {
+        "name": "Fairy Rose",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Fairy_Rose.png",
+        "seasons": ["Fall"],
+        "growth_time": "12 days",
+        "prices": {
+          "base": 290,
+          "silver": 362,
+          "gold": 435,
+          "iridium": 580
+        },
+        "seed_sources": [
+            {"source": "Pierre's (200g)"},
+            {"source": "JojaMart (250g)"}
+        ],
+        "profit_scenarios": ["7.5g/d"]
+    },
+    "Grape": {
+        "name": "Grape",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png",
+        "seasons": ["Fall"],
+        "growth_time": "12 days",
+        "prices": {
+          "base": 80,
+          "silver": 100,
+          "gold": 120,
+          "iridium": 160
+        },
+        "seed_sources": [
+            {"source": "Pierre's (60g)"},
+            {"source": "JojaMart (75g)"}
+        ],
+        "profit_scenarios": ["16.8g/d"]
+    },
+    "Pumpkin": {
+        "name": "Pumpkin",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png",
+        "seasons": ["Fall"],
+        "growth_time": "13 days",
+        "prices": {
+          "base": 320,
+          "silver": 400,
+          "gold": 480,
+          "iridium": 640
+        },
+        "seed_sources": [
+            {"source": "Pierre's (100g)"},
+            {"source": "JojaMart (125g)"}
+        ],
+        "profit_scenarios": ["16.92g/d"]
+    },
+    "Yam": {
+        "name": "Yam",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/52/Yam.png",
+        "seasons": ["Fall"],
+        "growth_time": "10 days",
+        "prices": {
+          "base": 160,
+          "silver": 200,
+          "gold": 240,
+          "iridium": 320
+        },
+        "seed_sources": [
+            {"source": "Pierre's (60g)"},
+            {"source": "JojaMart (75g)"}
+        ],
+        "profit_scenarios": ["10g/d"]
+    },
+    "Powdermelon": {
+        "name": "Powdermelon",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Powdermelon.png",
+        "seasons": ["Winter"],
+        "growth_time": "7 days",
+        "prices": {
+          "base": 60,
+          "silver": 75,
+          "gold": 90,
+          "iridium": 120
+        },
+        "seed_sources": null,
+        "profit_scenarios": ["8.57g/d"]
+    },
+    "Ancient Fruit": {
+        "name": "Ancient Fruit",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png",
+        "seasons": ["Spring", "Summer", "Fall"],
+        "growth_time": "28 days initial, 7 days regrowth",
+        "prices": {
+          "base": 60,
+          "silver": 75,
+          "gold": 90,
+          "iridium": 120
+        },
+        "seed_sources": [
+            {"source": "Crafting Recipe (Free)"}
+        ],
+        "profit_scenarios": ["57.14g/d"]
+    },
+    "Cactus Fruit": {
+        "name": "Cactus Fruit",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/3/32/Cactus_Fruit.png",
+        "seasons": ["Indoors only"],
+        "growth_time": "12 days initial, 3 days regrowth",
+        "prices": {
+          "base": 75,
+          "silver": 93,
+          "gold": 112,
+          "iridium": 150
+        },
+        "seed_sources": [
+            {"source": "Oasis (150g)"}
+        ],
+        "profit_scenarios": ["11.11g/d (Planting season)", "24.11g/d (Each season thereafter)"]
+    },
+    "Fiber": {
+        "name": "Fiber",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/4/45/Fiber.png",
+        "seasons": ["Spring", "Summer", "Fall", "Winter"],
+        "growth_time": "7 days",
+        "prices": {
+          "base": 1
+        },
+        "seed_sources": [
+            {"source": "Crafting Recipe (Free)"}
+        ],
+        "profit_scenarios": null
+    },
+    "Pineapple": {
+        "name": "Pineapple",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/f/fb/Pineapple.png",
+        "seasons": ["Summer (Farm)", "All year (Ginger Island)"],
+        "growth_time": "14 days initial, 7 days regrowth",
+        "prices": {
+            "base": 300,
+            "silver": 375,
+            "gold": 450,
+            "iridium": 600
+        },
+        "seed_sources": [
+            {"source": "Island Trader (1 Magma Cap)"}
+        ],
+        "profit_scenarios": ["28.57g/d"]
+    },
+    "Taro Root": {
+        "name": "Taro Root",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/0/01/Taro_Root.png",
+        "seasons": ["Summer (Farm)", "All year (Ginger Island)"],
+        "growth_time": "7 days irrigated, 10 days unirrigated", 
+        "prices": {
+            "base": 100,
+            "silver": 125,
+            "gold": 150,
+            "iridium": 200
+        },
+        "seed_sources": [
+            {"source": "Island Trader (2 Bone Fragments)"}
+        ],
+        "profit_scenarios": ["10g/d (Unirrigated)", "14.29g/d (Irrigated)"]
+    },
+    "Sweet Gem Berry": {
+        "name": "Sweet Gem Berry",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png",
+        "seasons": ["Fall"],
+        "growth_time": "24 days",
+        "prices": {
+            "base": 3000,
+            "silver": 3750,
+            "gold": 4500,
+            "iridium": 6000
+        },
+        "seed_sources": [
+            {"source": "Traveling Cart (1,000g)"}
+        ],
+        "profit_scenarios": ["83.33g/d"]
+    },
+    "Tea Leaves": {
+        "name": "Tea Leaves",
+        "image": "https://stardewvalleywiki.com/mediawiki/images/5/5b/Tea_Leaves.png",
+        "seasons": ["Spring", "Summer", "Fall"],
+        "growth_time": "20 days initial, 1 day regrowth",
+        "prices": {
+            "base": 50
+        },
+        "seed_sources": [
+            {"source": "Crafting Recipe (Free)"}
+        ],
+        "profit_scenarios": null
+    }
+}

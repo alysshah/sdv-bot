@@ -1,0 +1,45 @@
+{
+    "House Upgrades": {
+        "Upgrade 1": ["10,000g, 450 Wood"],
+        "Upgrade 2": ["65,000g, 100 Hardwood"],
+        "Upgrade 3": ["100,000g"]
+    },
+    "House Renovations": {
+        "Remove Crib": {
+            "cost": "Free",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3a/Cribless_Nursery.png/500px-Cribless_Nursery.png"
+        },
+        "Open Bedroom": {
+            "cost": "10,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c1/Divider.png/500px-Divider.png"
+        },
+        "Add Southern Room": {
+            "cost": "30,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/ab/Southern_Room.png/500px-Southern_Room.png"
+        },
+        "Add Corner Room": {
+            "cost": "20,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f5/Corner_Room.png/500px-Corner_Room.png"
+        },
+        "Add Dining Room": {
+            "cost": "150,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/a0/Dining-room.png/500px-Dining-room.png"
+        },
+        "Add Cubby": {
+            "cost": "10,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/1e/Cubby.png/500px-Cubby.png"
+        },
+        "Add Attic": {
+            "cost": "60,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/bb/Attic.png/500px-Attic.png"
+        },
+        "Expand Corner Room": {
+            "cost": "100,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/30/Larger-corner-room.png/500px-Larger-corner-room.png"
+        },
+        "Open Dining Room": {
+            "cost": "10,000g",
+            "image": "https://stardewvalleywiki.com/mediawiki/images/thumb/6/6d/Open-dining.png/500px-Open-dining.png"
+        }
+    }
+}
