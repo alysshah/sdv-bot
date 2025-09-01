@@ -192,7 +192,7 @@ async def house(ctx, category: str = None):
             upgrades = house_data["House Upgrades"]
             embed = discord.Embed(
                 title="House Upgrades",
-                description="Sequential upgrades for your farmhouse (must be done in order)",
+                description="Sequential upgrades for your farmhouse (must be done in order)\n",
                 color=0x8B4513
             )
             
@@ -200,7 +200,7 @@ async def house(ctx, category: str = None):
                 cost_formatted = '\n'.join(f'- {item}' for item in upgrade["cost"])
                 embed.add_field(
                     name=f"🏠 {upgrade['name']}",
-                    value=f"{cost_formatted}\n\n*{upgrade['description']}*",
+                    value=f"{cost_formatted}\n*{upgrade['description']}*\n",
                     inline=False
                 )
             
@@ -218,7 +218,7 @@ async def house(ctx, category: str = None):
             renovations = house_data["House Renovations"]
             embed = discord.Embed(
                 title="House Renovations",
-                description="Optional room additions (requires House Upgrade 2)",
+                description="Optional room additions (requires House Upgrade 2)\n",
                 color=0xA6571F
             )
             
