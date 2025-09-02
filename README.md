@@ -23,6 +23,9 @@ Use `!house upgrades` to see all farmhouse upgrade costs and requirements, or `!
 ### 🌾 Crop Command
 Use `!crop [crop name]` to get detailed information about any crop, including growing seasons, growth time, sell prices, seed sources, and profit calculations.
 
+### 🐟 Fish Command
+Use `!fish [fish name]` to get detailed information about any fish, including location, time, season, weather requirements, difficulty, sell prices, and XP rewards. Works for crab pot fish as well.
+
 ### ❓ Help Command
 Use `!help` to see all available commands with descriptions, or `!help [command]` for detailed information about a specific command.
 

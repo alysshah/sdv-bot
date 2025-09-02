@@ -15,6 +15,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     print("StardewSavvy is ready!")
+    # Set bot status
+    await bot.change_presence(activity=discord.CustomActivity(name="Adding hybrid commands!"))
 
 # Load townspeople data
 with open('townspeople.json', 'r') as file:
@@ -36,6 +38,10 @@ with open('house.json', 'r') as file:
 with open('crop.json', 'r') as file:
     crop_data = json.load(file)
 
+# Load fish data
+with open('fish.json', 'r') as file:
+    fish_data = json.load(file)
+
 #####GIFT COMMAND#################################
 
 @bot.command(name='gift')
@@ -50,7 +56,7 @@ async def gift(ctx, townsperson: str = None):
         data = townspeople_data[townsperson]
         embed = discord.Embed(
             title=f"Gift Preferences for {townsperson}",
-            color=0x1e31bd
+            color=0xFFD700
         )
         #embed.set_author(name=townsperson, icon_url=data["image"])
         embed.set_thumbnail(url=data["image"])
@@ -240,6 +246,99 @@ async def house(ctx, category: str = None):
             
     else:
         await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
+
+#####FISH COMMAND#################################
+
+@bot.command(name='fish')
+async def fish(ctx, *, fish_name: str = None):
+    """Shows detailed fish info (location, time, season, difficulty, prices)"""
+    if fish_name is None:
+        await ctx.send("Please specify a fish name. Example: `!fish Pufferfish`")
+        return
+    
+    # Find the fish (case-insensitive)
+    fish_key = None
+    for key in fish_data.keys():
+        if key.lower() == fish_name.lower():
+            fish_key = key
+            break
+    
+    if fish_key is None:
+        await ctx.send(f"Fish '{fish_name}' not found. Please check the spelling!")
+        return
+    
+    fish_info = fish_data[fish_key]
+    
+    # Create embed
+    embed = discord.Embed(
+        title=f"{fish_info['name']}",
+        color=0x4169E1  # Royal blue
+    )
+    
+    # Set thumbnail
+    if 'image' in fish_info and fish_info['image']:
+        embed.set_thumbnail(url=fish_info['image'])
+    
+    # Add type field (highlight if not regular fishing)
+    if fish_info.get('type') and fish_info['type'] != 'Fishing Pole Fish':
+        embed.add_field(name="🏷️ Type", value=fish_info['type'], inline=True)
+    
+    # Add location
+    if fish_info.get('location'):
+        if isinstance(fish_info['location'], list):
+            location_text = ", ".join(fish_info['location'])
+        else:
+            location_text = fish_info['location']
+        embed.add_field(name="📍 Location", value=location_text, inline=True)
+    
+    # Add time (if not null)
+    if fish_info.get('time') is not None:
+        embed.add_field(name="⏰ Time", value=fish_info['time'], inline=True)
+    
+    # Add season (if not null)
+    if fish_info.get('season') is not None:
+        if isinstance(fish_info['season'], list):
+            season_text = ", ".join(fish_info['season'])
+        else:
+            season_text = fish_info['season']
+        embed.add_field(name="🌸 Season", value=season_text, inline=True)
+    
+    # Add weather (if not null)
+    if fish_info.get('weather') is not None:
+        embed.add_field(name="🌤️ Weather", value=fish_info['weather'], inline=True)
+    
+    # Add difficulty (if not null)
+    if fish_info.get('difficulty') is not None:
+        embed.add_field(name="🎣 Difficulty", value=fish_info['difficulty'], inline=True)
+    
+    # Add prices
+    if 'base_price' in fish_info:
+        prices = fish_info['base_price']
+        price_labels = ['Base', 'Silver', 'Gold', 'Iridium']
+        valid_prices = []
+        for i, price in enumerate(prices):
+            if price is not None:
+                valid_prices.append(f"{price_labels[i]}: {price}g")
+        
+        if valid_prices:
+            price_text = "\n".join(valid_prices)
+            price_text += "\n*Fisher Profession (+25%)*\n*Angler Profession (+50%)*"
+            embed.add_field(name="💰 Sell Prices", value=price_text, inline=True)
+    
+    # Add XP (if not null)
+    if fish_info.get('base_xp') is not None:
+        embed.add_field(name="⭐ Base XP", value=fish_info['base_xp'], inline=True)
+    
+    # Add wiki button
+    view = discord.ui.View()
+    wiki_button = discord.ui.Button(
+        label="View All Fish on Wiki",
+        url="https://stardewvalleywiki.com/Fish",
+        style=discord.ButtonStyle.link
+    )
+    view.add_item(wiki_button)
+    
+    await ctx.send(embed=embed, view=view)
 
 #####CROP COMMAND#################################
 
