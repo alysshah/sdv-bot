@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print("StardewSavvy is ready!")
     # Set bot status
-    await bot.change_presence(activity=discord.CustomActivity(name="Now supports both ! and / commands!"))
+    await bot.change_presence(activity=discord.CustomActivity(name="Now supports slash commands!"))
     
     # Sync hybrid commands to create slash versions
     try:
@@ -142,11 +142,8 @@ async def build(ctx, *, building: str = None):
 #####EVENT COMMAND#################################
 
 @bot.hybrid_command(name='events', description='Shows events for a season or specific day')
-async def events(ctx, season: str = None, day: int = None):
+async def events(ctx, season: str, day: int = None):
     """Shows events for a season or specific day"""
-    if season is None:
-        await ctx.send("Please provide a season. Example: `!events Spring` or `!events Summer 15`")
-        return
     
     season = season.capitalize()
 
