@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import json
 import os
+from typing import Literal
 from dotenv import load_dotenv
 
 # Load environment variables from .env
@@ -16,7 +17,14 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print("StardewSavvy is ready!")
     # Set bot status
-    await bot.change_presence(activity=discord.CustomActivity(name="Adding hybrid commands!"))
+    await bot.change_presence(activity=discord.CustomActivity(name="Now supports both ! and / commands!"))
+    
+    # Sync hybrid commands to create slash versions
+    try:
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} slash commands")
+    except Exception as e:
+        print(f"Failed to sync commands: {e}")
 
 # Load townspeople data
 with open('townspeople.json', 'r') as file:
@@ -44,7 +52,7 @@ with open('fish.json', 'r') as file:
 
 #####GIFT COMMAND#################################
 
-@bot.command(name='gift')
+@bot.hybrid_command(name='gift', description='Shows loved and liked gifts for a villager')
 async def gift(ctx, townsperson: str = None):
     """Shows loved and liked gifts for a villager"""
     if townsperson is None:
@@ -78,7 +86,7 @@ async def gift(ctx, townsperson: str = None):
 
 #####CHAR COMMAND#################################
         
-@bot.command(name='char')
+@bot.hybrid_command(name='char', description='Shows character profile including birthday')
 async def char(ctx, townsperson: str = None):
     """Shows character profile including birthday"""
     if townsperson is None:
@@ -102,14 +110,14 @@ async def char(ctx, townsperson: str = None):
 
 #####BUILD COMMAND#################################
         
-@bot.command(name='build')
-async def build(ctx, *building: str):
+@bot.hybrid_command(name='build', description='Shows materials and cost for farm buildings')
+async def build(ctx, *, building: str = None):
     """Shows materials and cost for farm buildings"""
-    if not building:
+    if building is None:
         await ctx.send("Please provide a building name. Example: `!build Barn`")
         return
     
-    building = " ".join(building).title()
+    building = building.title()
     if building in building_data:
         data = building_data[building]
         embed = discord.Embed(
@@ -133,8 +141,8 @@ async def build(ctx, *building: str):
 
 #####EVENT COMMAND#################################
 
-@bot.command(name='events')
-async def events(ctx, season=None, day=None):
+@bot.hybrid_command(name='events', description='Shows events for a season or specific day')
+async def events(ctx, season: str = None, day: int = None):
     """Shows events for a season or specific day"""
     if season is None:
         await ctx.send("Please provide a season. Example: `!events Spring` or `!events Summer 15`")
@@ -184,8 +192,8 @@ async def events(ctx, season=None, day=None):
 
 #####HOUSE COMMAND#################################
 
-@bot.command(name='house')
-async def house(ctx, category: str = None):
+@bot.hybrid_command(name='house', description='Shows house upgrades or renovations')
+async def house(ctx, category: Literal['upgrades', 'renovations'] = None):
     """Shows house upgrades or renovations (use 'upgrades' or 'renovations')"""
     if category is None:
         await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
@@ -249,7 +257,7 @@ async def house(ctx, category: str = None):
 
 #####FISH COMMAND#################################
 
-@bot.command(name='fish')
+@bot.hybrid_command(name='fish', description='Shows detailed fish info (location, time, season, difficulty, prices)')
 async def fish(ctx, *, fish_name: str = None):
     """Shows detailed fish info (location, time, season, difficulty, prices)"""
     if fish_name is None:
@@ -279,9 +287,9 @@ async def fish(ctx, *, fish_name: str = None):
     if 'image' in fish_info and fish_info['image']:
         embed.set_thumbnail(url=fish_info['image'])
     
-    # Add type field (highlight if not regular fishing)
-    if fish_info.get('type') and fish_info['type'] != 'Fishing Pole Fish':
-        embed.add_field(name="🏷️ Type", value=fish_info['type'], inline=True)
+    # Add type field for ALL fish (at top, full width)
+    if fish_info.get('type'):
+        embed.add_field(name="🏷️ Type", value=fish_info['type'], inline=False)
     
     # Add location
     if fish_info.get('location'):
@@ -311,7 +319,11 @@ async def fish(ctx, *, fish_name: str = None):
     if fish_info.get('difficulty') is not None:
         embed.add_field(name="🎣 Difficulty", value=fish_info['difficulty'], inline=True)
     
-    # Add prices
+    # Add XP (if not null)
+    if fish_info.get('base_xp') is not None:
+        embed.add_field(name="⭐ Base XP", value=fish_info['base_xp'], inline=True)
+    
+    # Add prices (at bottom, full width)
     if 'base_price' in fish_info:
         prices = fish_info['base_price']
         price_labels = ['Base', 'Silver', 'Gold', 'Iridium']
@@ -323,11 +335,7 @@ async def fish(ctx, *, fish_name: str = None):
         if valid_prices:
             price_text = "\n".join(valid_prices)
             price_text += "\n*Fisher Profession (+25%)*\n*Angler Profession (+50%)*"
-            embed.add_field(name="💰 Sell Prices", value=price_text, inline=True)
-    
-    # Add XP (if not null)
-    if fish_info.get('base_xp') is not None:
-        embed.add_field(name="⭐ Base XP", value=fish_info['base_xp'], inline=True)
+            embed.add_field(name="💰 Sell Prices", value=price_text, inline=False)
     
     # Add wiki button
     view = discord.ui.View()
@@ -342,7 +350,7 @@ async def fish(ctx, *, fish_name: str = None):
 
 #####CROP COMMAND#################################
 
-@bot.command(name='crop')
+@bot.hybrid_command(name='crop', description='Shows detailed crop info (seasons, growth, prices, etc.)')
 async def crop(ctx, *, crop_name: str = None):
     """Shows detailed crop info (seasons, growth, prices, etc.)"""
     if crop_name is None:
@@ -386,7 +394,7 @@ async def crop(ctx, *, crop_name: str = None):
             price_parts.append(f"Iridium: {prices['iridium']}g")
         
         price_text = '\n'.join(price_parts)
-        embed.add_field(name="💰 Sell Prices", value=price_text, inline=False)
+        embed.add_field(name="💰 Sell Prices", value=price_text, inline=True)
         
         # Seed sources
         if data.get("seed_sources"):
@@ -396,10 +404,10 @@ async def crop(ctx, *, crop_name: str = None):
             seed_text = '\n'.join(seed_parts)
             embed.add_field(name="🌰 Seed Sources", value=seed_text, inline=True)
         
-        # Profit scenarios
+        # Profit scenarios (alone at bottom)
         if data.get("profit_scenarios"):
             profit_text = '\n'.join(data["profit_scenarios"])
-            embed.add_field(name="📈 Profit", value=profit_text, inline=True)
+            embed.add_field(name="📈 Profit", value=profit_text, inline=False)
         
         # Create a button linking to the wiki
         button = discord.ui.Button(label="View All Crops on Wiki", url="https://stardewvalleywiki.com/Crops")
