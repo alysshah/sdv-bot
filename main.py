@@ -9,17 +9,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 intents = discord.Intents.default()
-intents.message_content = True
 
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix=None, intents=intents)
 
 @bot.event
 async def on_ready():
     print("StardewSavvy is ready!")
     # Set bot status
-    await bot.change_presence(activity=discord.CustomActivity(name="Now supports slash commands!"))
+    await bot.change_presence(activity=discord.CustomActivity(name="Use /help for commands!"))
     
-    # Sync hybrid commands to create slash versions
+    # Sync slash commands
     try:
         synced = await bot.tree.sync()
         print(f"Synced {len(synced)} slash commands")
@@ -52,12 +51,9 @@ with open('fish.json', 'r') as file:
 
 #####GIFT COMMAND#################################
 
-@bot.hybrid_command(name='gift', description='Shows loved and liked gifts for a villager')
-async def gift(ctx, townsperson: str = None):
+@bot.tree.command(name='gift', description='Shows loved and liked gifts for a villager')
+async def gift(ctx, townsperson: str):
     """Shows loved and liked gifts for a villager"""
-    if townsperson is None:
-        await ctx.send("Please provide a townsperson name. Example: `!gift Alex`")
-        return
     
     townsperson = townsperson.capitalize()
     if townsperson in townspeople_data:
@@ -86,12 +82,9 @@ async def gift(ctx, townsperson: str = None):
 
 #####CHAR COMMAND#################################
         
-@bot.hybrid_command(name='char', description='Shows character profile including birthday')
-async def char(ctx, townsperson: str = None):
+@bot.tree.command(name='char', description='Shows character profile including birthday')
+async def char(ctx, townsperson: str):
     """Shows character profile including birthday"""
-    if townsperson is None:
-        await ctx.send("Please provide a townsperson name. Example: `!char Abigail`")
-        return
     
     townsperson = townsperson.capitalize()
     if townsperson in townspeople_data:
@@ -110,12 +103,9 @@ async def char(ctx, townsperson: str = None):
 
 #####BUILD COMMAND#################################
         
-@bot.hybrid_command(name='build', description='Shows materials and cost for farm buildings')
-async def build(ctx, *, building: str = None):
+@bot.tree.command(name='build', description='Shows materials and cost for farm buildings')
+async def build(ctx, *, building: str):
     """Shows materials and cost for farm buildings"""
-    if building is None:
-        await ctx.send("Please provide a building name. Example: `!build Barn`")
-        return
     
     building = building.title()
     if building in building_data:
@@ -141,7 +131,7 @@ async def build(ctx, *, building: str = None):
 
 #####EVENT COMMAND#################################
 
-@bot.hybrid_command(name='events', description='Shows events for a season or specific day')
+@bot.tree.command(name='events', description='Shows events for a season or specific day')
 async def events(ctx, season: str, day: int = None):
     """Shows events for a season or specific day"""
     
@@ -189,12 +179,9 @@ async def events(ctx, season: str, day: int = None):
 
 #####HOUSE COMMAND#################################
 
-@bot.hybrid_command(name='house', description='Shows house upgrades or renovations')
-async def house(ctx, category: Literal['upgrades', 'renovations'] = None):
+@bot.tree.command(name='house', description='Shows house upgrades or renovations')
+async def house(ctx, category: Literal['upgrades', 'renovations']):
     """Shows house upgrades or renovations (use 'upgrades' or 'renovations')"""
-    if category is None:
-        await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
-        return
     
     category = category.lower()
     
@@ -248,18 +235,12 @@ async def house(ctx, category: Literal['upgrades', 'renovations'] = None):
             await ctx.send(embed=embed, view=view)
         else:
             await ctx.send("House renovation data not available.")
-            
-    else:
-        await ctx.send("Please specify either `upgrades` or `renovations`. Example: `!house upgrades`")
 
 #####FISH COMMAND#################################
 
-@bot.hybrid_command(name='fish', description='Shows detailed fish info (location, time, season, difficulty, prices)')
-async def fish(ctx, *, fish_name: str = None):
+@bot.tree.command(name='fish', description='Shows detailed fish info (location, time, season, difficulty, prices)')
+async def fish(ctx, *, fish_name: str):
     """Shows detailed fish info (location, time, season, difficulty, prices)"""
-    if fish_name is None:
-        await ctx.send("Please specify a fish name. Example: `!fish Pufferfish`")
-        return
     
     # Find the fish (case-insensitive)
     fish_key = None
@@ -347,12 +328,9 @@ async def fish(ctx, *, fish_name: str = None):
 
 #####CROP COMMAND#################################
 
-@bot.hybrid_command(name='crop', description='Shows detailed crop info (seasons, growth, prices, etc.)')
-async def crop(ctx, *, crop_name: str = None):
+@bot.tree.command(name='crop', description='Shows detailed crop info (seasons, growth, prices, etc.)')
+async def crop(ctx, *, crop_name: str):
     """Shows detailed crop info (seasons, growth, prices, etc.)"""
-    if crop_name is None:
-        await ctx.send("Please provide a crop name. Example: `!crop Parsnip`")
-        return
     
     # Handle case-insensitive matching
     crop_name_formatted = None
@@ -414,6 +392,62 @@ async def crop(ctx, *, crop_name: str = None):
         await ctx.send(embed=embed, view=view)
     else:
         await ctx.send(f"No data available for '{crop_name}'.")
+
+#####HELP COMMAND#################################
+
+@bot.tree.command(name='help', description='Shows all available commands and their descriptions')
+async def help_command(ctx):
+    """Shows all available commands and their descriptions"""
+    embed = discord.Embed(
+        title="StardewSavvy Commands",
+        description="Here are all the available commands to help you with Stardew Valley!",
+        color=0x000000
+    )
+    
+    # Add command fields
+    embed.add_field(
+        name="/gift",
+        value="Shows loved and liked gifts for a villager\n*Usage: `/gift townsperson:Alex`*",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="/char", 
+        value="Shows character profile including birthday\n*Usage: `/char townsperson:Abigail`*",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="/build",
+        value="Shows materials and cost for farm buildings\n*Usage: `/build building:Barn`*", 
+        inline=False
+    )
+    
+    embed.add_field(
+        name="/events",
+        value="Shows events for a season or specific day\n*Usage: `/events season:Spring` or `/events season:Spring day:15`*",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="🏠 /house",
+        value="Shows house upgrades or renovations\n*Usage: `/house category:upgrades`*",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="/fish",
+        value="Shows detailed fish info (location, time, season, difficulty, prices)\n*Usage: `/fish fish_name:Pufferfish`*",
+        inline=False
+    )
+    
+    embed.add_field(
+        name="/crop",
+        value="Shows detailed crop info (seasons, growth, prices, etc.)\n*Usage: `/crop crop_name:Parsnip`*",
+        inline=False
+    )
+    
+    await ctx.send(embed=embed)
 
 
 bot.run(os.getenv('BOT_TOKEN'))
