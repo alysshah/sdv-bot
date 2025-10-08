@@ -406,44 +406,51 @@ async def help_command(ctx):
     
     # Add command fields
     embed.add_field(
-        name="/gift",
-        value="Shows loved and liked gifts for a villager\n*Usage: `/gift townsperson:Alex`*",
+        name="🎁 /gift",
+        value="Shows loved and liked gifts for a villager (`/gift townsperson:Alex`)",
         inline=False
     )
     
     embed.add_field(
-        name="/char", 
-        value="Shows character profile including birthday\n*Usage: `/char townsperson:Abigail`*",
+        name="👤 /char", 
+        value="Shows character profile including birthday (`/char townsperson:Abigail`)",
         inline=False
     )
     
     embed.add_field(
-        name="/build",
-        value="Shows materials and cost for farm buildings\n*Usage: `/build building:Barn`*", 
+        name="🏗️ /build",
+        value="Shows materials and cost for farm buildings (`/build building:Barn`)", 
         inline=False
     )
     
     embed.add_field(
-        name="/events",
-        value="Shows events for a season or specific day\n*Usage: `/events season:Spring` or `/events season:Spring day:15`*",
+        name="🎉 /events",
+        value="Shows events for a season or specific day (`/events season:Spring` or `/events season:Spring day:15`)",
         inline=False
     )
     
     embed.add_field(
         name="🏠 /house",
-        value="Shows house upgrades or renovations\n*Usage: `/house category:upgrades`*",
+        value="Shows house upgrades or renovations (`/house category:upgrades`)",
         inline=False
     )
     
     embed.add_field(
-        name="/fish",
-        value="Shows detailed fish info (location, time, season, difficulty, prices)\n*Usage: `/fish fish_name:Pufferfish`*",
+        name="🐟 /fish",
+        value="Shows detailed fish info (location, time, season, difficulty, prices) (`/fish fish_name:Pufferfish`)",
         inline=False
     )
     
     embed.add_field(
-        name="/crop",
-        value="Shows detailed crop info (seasons, growth, prices, etc.)\n*Usage: `/crop crop_name:Parsnip`*",
+        name="🌾 /crop",
+        value="Shows detailed crop info (seasons, growth, prices, etc.) (`/crop crop_name:Parsnip`)",
+        inline=False
+    )
+    
+    # Add useful links section
+    embed.add_field(
+        name="🔗 Useful Links",
+        value="[Stardew Valley Wiki](https://stardewvalleywiki.com/)\n[Invite Bot to Server](https://discord.com/oauth2/authorize?client_id=1189074338364792876&permissions=2147862528&integration_type=0&scope=bot+applications.commands)\n[GitHub Repository](https://github.com/alysshah/sdv-bot)",
         inline=False
     )
     
