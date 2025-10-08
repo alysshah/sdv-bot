@@ -76,9 +76,9 @@ async def gift(ctx, townsperson: str):
         view = discord.ui.View()
         view.add_item(button)
 
-        await ctx.send(embed=embed, view=view)
+        await ctx.response.send_message(embed=embed, view=view)
     else:
-        await ctx.send(f"No data available for {townsperson}.")
+        await ctx.response.send_message(f"No data available for {townsperson}.")
 
 #####CHAR COMMAND#################################
         
@@ -97,9 +97,9 @@ async def char(ctx, townsperson: str):
         embed.set_thumbnail(url=data["image"])
         embed.add_field(name="🎂 Birthday", value=data["birthday"], inline=False)
 
-        await ctx.send(embed=embed)
+        await ctx.response.send_message(embed=embed)
     else:
-        await ctx.send(f"No data available for {townsperson}.")
+        await ctx.response.send_message(f"No data available for {townsperson}.")
 
 #####BUILD COMMAND#################################
         
@@ -125,9 +125,9 @@ async def build(ctx, *, building: str):
         view = discord.ui.View()
         view.add_item(button)
 
-        await ctx.send(embed=embed, view=view)
+        await ctx.response.send_message(embed=embed, view=view)
     else:
-        await ctx.send(f"No data available for {building}.")
+        await ctx.response.send_message(f"No data available for {building}.")
 
 #####EVENT COMMAND#################################
 
@@ -152,15 +152,15 @@ async def events(ctx, season: str, day: int = None):
             events_formatted = '\n'.join(events_formatted)
             embed.add_field(name="🎉 Event(s)", value=events_formatted, inline=False)
 
-            await ctx.send(embed=embed)
+            await ctx.response.send_message(embed=embed)
         else:
-            await ctx.send(f"Please provide an existing season")
+            await ctx.response.send_message(f"Please provide an existing season")
     
     # If day paramter IS provided --> only show events on that specific day
     else:
         if season in events_data:
             if int(day) > 28 or int(day) < 0:
-                await ctx.send(f"Not a valid date.")
+                await ctx.response.send_message(f"Not a valid date.")
             else:
                 embed = discord.Embed(
                     title=f"Happening on {season} {day}",
@@ -173,9 +173,9 @@ async def events(ctx, season: str, day: int = None):
                 else:
                     embed.add_field(name="🎉 Event(s)", value="No events", inline=False)
 
-                await ctx.send(embed=embed)
+                await ctx.response.send_message(embed=embed)
         else:
-            await ctx.send(f"No data available for this date.")
+            await ctx.response.send_message(f"No data available for this date.")
 
 #####HOUSE COMMAND#################################
 
@@ -207,9 +207,9 @@ async def house(ctx, category: Literal['upgrades', 'renovations']):
             view = discord.ui.View()
             view.add_item(button)
             
-            await ctx.send(embed=embed, view=view)
+            await ctx.response.send_message(embed=embed, view=view)
         else:
-            await ctx.send("House upgrade data not available.")
+            await ctx.response.send_message("House upgrade data not available.")
             
     elif category == "renovations":
         if "House Renovations" in house_data:
@@ -232,9 +232,9 @@ async def house(ctx, category: Literal['upgrades', 'renovations']):
             view = discord.ui.View()
             view.add_item(button)
             
-            await ctx.send(embed=embed, view=view)
+            await ctx.response.send_message(embed=embed, view=view)
         else:
-            await ctx.send("House renovation data not available.")
+            await ctx.response.send_message("House renovation data not available.")
 
 #####FISH COMMAND#################################
 
@@ -250,7 +250,7 @@ async def fish(ctx, *, fish_name: str):
             break
     
     if fish_key is None:
-        await ctx.send(f"Fish '{fish_name}' not found. Please check the spelling!")
+        await ctx.response.send_message(f"Fish '{fish_name}' not found. Please check the spelling!")
         return
     
     fish_info = fish_data[fish_key]
@@ -324,7 +324,7 @@ async def fish(ctx, *, fish_name: str):
     )
     view.add_item(wiki_button)
     
-    await ctx.send(embed=embed, view=view)
+    await ctx.response.send_message(embed=embed, view=view)
 
 #####CROP COMMAND#################################
 
@@ -389,9 +389,9 @@ async def crop(ctx, *, crop_name: str):
         view = discord.ui.View()
         view.add_item(button)
         
-        await ctx.send(embed=embed, view=view)
+        await ctx.response.send_message(embed=embed, view=view)
     else:
-        await ctx.send(f"No data available for '{crop_name}'.")
+        await ctx.response.send_message(f"No data available for '{crop_name}'.")
 
 #####HELP COMMAND#################################
 
@@ -447,7 +447,7 @@ async def help_command(ctx):
         inline=False
     )
     
-    await ctx.send(embed=embed)
+    await ctx.response.send_message(embed=embed)
 
 
 bot.run(os.getenv('BOT_TOKEN'))
